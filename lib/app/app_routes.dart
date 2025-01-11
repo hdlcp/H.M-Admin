@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import '../screens/loading_screen.dart';
 import '../screens/welcome_screen.dart';
 import '../screens/connexion_screen.dart'; // Nouveau nom du fichier
+import '../screens/admin_home_screen.dart';
+import '../screens/caissiere_home_screen.dart';
+import '../screens/cuisiniere_home_screen.dart';
 
 class AppRoutes {
   // Définition des constantes de routes
@@ -10,6 +13,9 @@ class AppRoutes {
   static const String adminDashboard = '/admin';
   static const String cashierDashboard = '/cashier';
   static const String cookDashboard = '/cook';
+  static const String adminHome = '/admin_home';
+  static const String caissiereHome = '/caissiere_home';
+  static const String cuisiniereHome = '/cuisiniere_home';
 
   // Gestionnaire des routes
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -18,6 +24,12 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const LoadingScreen());
       case welcome:
         return MaterialPageRoute(builder: (_) => const WelcomeScreen());
+      case adminHome:
+        return MaterialPageRoute(builder: (_) => const AdminHomeScreen());
+      case caissiereHome:
+        return MaterialPageRoute(builder: (_) => const CaissiereHomeScreen());
+      case cuisiniereHome:
+        return MaterialPageRoute(builder: (_) => const CuisiniereHomeScreen());
       case adminDashboard:
         return MaterialPageRoute(
           builder: (_) => const ConnexionScreen(
@@ -28,14 +40,14 @@ class AppRoutes {
       case cashierDashboard:
         return MaterialPageRoute(
           builder: (_) => const ConnexionScreen(
-            title: "Gestion des clients et paiements",
+            title: "Gestion des Clients et Paiements",
             imagePath: "assets/images/payment_image.png",
           ),
         );
       case cookDashboard:
         return MaterialPageRoute(
           builder: (_) => const ConnexionScreen(
-            title: "Gestion des commandes",
+            title: "Gestion des Commandes",
             imagePath: "assets/images/cook_image.png",
           ),
         );

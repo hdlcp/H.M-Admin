@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../app/app_routes.dart';
 
 class ConnexionScreen extends StatefulWidget {
   final String title;
@@ -104,7 +105,8 @@ class _ConnexionScreenState extends State<ConnexionScreen> {
                         // Bouton Se connecter
                         ElevatedButton(
                           onPressed: () {
-                            // Action de connexion
+                            _navigateBasedOnTitle(
+                                context); // Action de connexion
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color(0xFF191A2D),
@@ -198,5 +200,23 @@ class _ConnexionScreenState extends State<ConnexionScreen> {
         fontFamily: 'Orbitron',
       ),
     );
+  }
+
+  void _navigateBasedOnTitle(BuildContext context) {
+    switch (widget.title) {
+      case "Gestion Administrative":
+        Navigator.pushNamed(context, AppRoutes.adminHome);
+        break;
+      case "Gestion des Clients et Paiements":
+        Navigator.pushNamed(context, AppRoutes.caissiereHome);
+        break;
+      case "Gestion des Commandes":
+        Navigator.pushNamed(context, AppRoutes.cuisiniereHome);
+        break;
+      default:
+      // ScaffoldMessenger.of(context).showSnackBar(
+      //   const SnackBar(content: Text("Titre non reconnu")),
+      // );
+    }
   }
 }
