@@ -1,0 +1,65 @@
+name: h_m_admin
+description: "A new Flutter project."
+
+publish_to: 'none' 
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_spinkit: ^5.2.0
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.0.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^4.0.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/icon.png"
+
+flutter:
+
+  uses-material-design: true
+
+  fonts:
+    - family: Orbitron
+      fonts:
+        - asset: assets/fonts/Orbitron-Regular.ttf
+        - asset: assets/fonts/Orbitron-Bold.ttf
+          weight: 700
+    - family: Permanent Marker
+      fonts:
+        - asset: assets/fonts/PermanentMarker-Regular.ttf
+
+  assets:
+     # UI elements
+    - assets/images/rectangle_haut.png
+    - assets/images/rectangle_bas.png
+    - assets/images/logo_hm.png
+    - assets/images/admin_image.png
+    - assets/images/cook_image.png
+    - assets/images/payment_image.png
+
+    # People images
+    - assets/images/jean.png
+    - assets/images/romeo.png
+    - assets/images/simon.png
+    - assets/images/patricia.png
+
+    # Food images
+    - assets/images/food_0.png
+    - assets/images/food_1.png
+
+    # Icons
+    - assets/icons/select_icon.svg
+    - assets/icons/food_icon.svg
+    - assets/icons/account_cog_icon.svg
+    - assets/icons/account_cash_icon.svg
