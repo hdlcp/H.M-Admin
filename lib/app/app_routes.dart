@@ -7,6 +7,8 @@ import '../screens/caissiere_home_screen.dart';
 import '../screens/cuisiniere_home_screen.dart';
 import '../screens/choice_payment_screen.dart';
 import '../screens/resto_payment_screen.dart';
+import '../screens/details_commande_screen.dart'; // Ajouter ce fichier
+import '../screens/commande_fait_screen.dart'; // Ajouter ce fichier
 
 class AppRoutes {
   // Définition des constantes de routes
@@ -20,6 +22,8 @@ class AppRoutes {
   static const String cuisiniereHome = '/cuisiniere_home';
   static const String ChoicePayment = '/choicePayment';
   static const String RestoPayment = '/restoPayment';
+  static const String detailsCommandeScreen = '/details_commande_screen';
+  static const String commandeFaitScreen = '/commande_fait_screen';
 
   // Gestionnaire des routes
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -64,6 +68,17 @@ class AppRoutes {
         final args = settings.arguments as Map<String, String>;
         return MaterialPageRoute(
           builder: (_) => RestoPaymentScreen(clientName: args['clientName']!),
+        );
+      case detailsCommandeScreen:
+        final args = settings.arguments as Map<String, String>;
+        return MaterialPageRoute(
+          builder: (_) =>
+              DetailsCommandeScreen(clientName: args['clientName']!),
+        );
+      case commandeFaitScreen:
+        final args = settings.arguments as Map<String, String>;
+        return MaterialPageRoute(
+          builder: (_) => CommandeFaitScreen(clientName: args['clientName']!),
         );
       default:
         return MaterialPageRoute(
