@@ -63,3 +63,7 @@ flutter:
     - assets/icons/food_icon.svg
     - assets/icons/account_cog_icon.svg
     - assets/icons/account_cash_icon.svg
+    - assets/icons/haircut_icon.png
+    - assets/icons/beard_icon.png
+    - assets/icons/manicure_icon.png
+    - assets/icons/cart_icon.svg

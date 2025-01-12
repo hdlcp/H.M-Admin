@@ -5,6 +5,8 @@ import '../screens/connexion_screen.dart'; // Nouveau nom du fichier
 import '../screens/admin_home_screen.dart';
 import '../screens/caissiere_home_screen.dart';
 import '../screens/cuisiniere_home_screen.dart';
+import '../screens/choice_payment_screen.dart';
+import '../screens/resto_payment_screen.dart';
 
 class AppRoutes {
   // Définition des constantes de routes
@@ -16,6 +18,8 @@ class AppRoutes {
   static const String adminHome = '/admin_home';
   static const String caissiereHome = '/caissiere_home';
   static const String cuisiniereHome = '/cuisiniere_home';
+  static const String ChoicePayment = '/choicePayment';
+  static const String RestoPayment = '/restoPayment';
 
   // Gestionnaire des routes
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -27,7 +31,7 @@ class AppRoutes {
       case adminHome:
         return MaterialPageRoute(builder: (_) => const AdminHomeScreen());
       case caissiereHome:
-        return MaterialPageRoute(builder: (_) => const CaissiereHomeScreen());
+        return MaterialPageRoute(builder: (_) => CaissiereHomeScreen());
       case cuisiniereHome:
         return MaterialPageRoute(builder: (_) => const CuisiniereHomeScreen());
       case adminDashboard:
@@ -50,6 +54,16 @@ class AppRoutes {
             title: "Gestion des Commandes",
             imagePath: "assets/images/cook_image.png",
           ),
+        );
+      case ChoicePayment:
+        final args = settings.arguments as Map<String, String>;
+        return MaterialPageRoute(
+          builder: (_) => ChoicePaymentScreen(clientName: args['clientName']!),
+        );
+      case RestoPayment:
+        final args = settings.arguments as Map<String, String>;
+        return MaterialPageRoute(
+          builder: (_) => RestoPaymentScreen(clientName: args['clientName']!),
         );
       default:
         return MaterialPageRoute(
