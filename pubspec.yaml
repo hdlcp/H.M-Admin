@@ -68,3 +68,9 @@ flutter:
     - assets/icons/manicure_icon.png
     - assets/icons/cart_icon.svg
     - assets/icons/menu_icon.svg
+    - assets/icons/employes.svg
+    - assets/icons/suivi.svg
+    - assets/icons/revenus.svg
+    - assets/icons/impayes.svg
+    - assets/icons/queues.svg
+    - assets/icons/add_icon.svg

@@ -205,7 +205,7 @@ class _ConnexionScreenState extends State<ConnexionScreen> {
   void _navigateBasedOnTitle(BuildContext context) {
     switch (widget.title) {
       case "Gestion Administrative":
-        Navigator.pushNamed(context, AppRoutes.adminHome);
+        Navigator.pushNamed(context, AppRoutes.gestionEmployesScreen);
         break;
       case "Gestion des Clients et Paiements":
         Navigator.pushNamed(context, AppRoutes.caissiereHome);

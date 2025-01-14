@@ -9,6 +9,11 @@ import '../screens/choice_payment_screen.dart';
 import '../screens/resto_payment_screen.dart';
 import '../screens/details_commande_screen.dart'; // Ajouter ce fichier
 import '../screens/commande_fait_screen.dart'; // Ajouter ce fichier
+import '../screens/gestion_employes_screen.dart'; // L'écran Employés
+import '../screens/suivi_screen.dart'; // L'écran Suivi
+import '../screens/revenus_screen.dart'; // L'écran Revenus
+import '../screens/impayes_screen.dart'; // L'écran Impayés
+import '../screens/queues_screen.dart'; // L'écran Queues
 
 class AppRoutes {
   // Définition des constantes de routes
@@ -24,6 +29,11 @@ class AppRoutes {
   static const String RestoPayment = '/restoPayment';
   static const String detailsCommandeScreen = '/details_commande_screen';
   static const String commandeFaitScreen = '/commande_fait_screen';
+  static const String gestionEmployesScreen = '/employesScreen';
+  static const String suiviScreen = '/suiviScreen';
+  static const String revenusScreen = '/revenusScreen';
+  static const String impayesScreen = '/impayesScreen';
+  static const String queuesScreen = '/queuesScreen';
 
   // Gestionnaire des routes
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -80,6 +90,18 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (_) => CommandeFaitScreen(clientName: args['clientName']!),
         );
+
+      case suiviScreen:
+      //  return MaterialPageRoute(builder: (_) => SuiviScreen());
+      case revenusScreen:
+      //return MaterialPageRoute(builder: (_) => RevenusScreen());
+      case impayesScreen:
+      //  return MaterialPageRoute(builder: (_) => ImpayesScreen());
+      case queuesScreen:
+      //  return MaterialPageRoute(builder: (_) => QueuesScreen());
+      case gestionEmployesScreen:
+        return MaterialPageRoute(builder: (_) => GestionEmployesScreen());
+
       default:
         return MaterialPageRoute(
           builder: (_) => const Scaffold(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart'; // Nécessaire pour charger les SVG
+import 'package:flutter_svg/flutter_svg.dart';
 import '../app/app_routes.dart';
 
 class RestoPaymentScreen extends StatefulWidget {
