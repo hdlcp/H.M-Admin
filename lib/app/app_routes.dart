@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import '../screens/loading_screen.dart';
 import '../screens/welcome_screen.dart';
-import '../screens/connexion_screen.dart'; // Nouveau nom du fichier
+import '../screens/connexion_screen.dart';
 import '../screens/admin_home_screen.dart';
 import '../screens/caissiere_home_screen.dart';
 import '../screens/cuisiniere_home_screen.dart';
 import '../screens/choice_payment_screen.dart';
 import '../screens/resto_payment_screen.dart';
-import '../screens/details_commande_screen.dart'; // Ajouter ce fichier
-import '../screens/commande_fait_screen.dart'; // Ajouter ce fichier
-import '../screens/gestion_employes_screen.dart'; // L'écran Employés
+import '../screens/details_commande_screen.dart';
+import '../screens/commande_fait_screen.dart';
+import '../screens/gestion_employes_screen.dart';
 import '../screens/suivi_screen.dart'; // L'écran Suivi
 import '../screens/revenus_screen.dart'; // L'écran Revenus
 import '../screens/impayes_screen.dart'; // L'écran Impayés
 import '../screens/queues_screen.dart'; // L'écran Queues
+import '../screens/ajout_globale_screen.dart';
 
 class AppRoutes {
   // Définition des constantes de routes
@@ -34,6 +35,7 @@ class AppRoutes {
   static const String revenusScreen = '/revenusScreen';
   static const String impayesScreen = '/impayesScreen';
   static const String queuesScreen = '/queuesScreen';
+  static const String ajoutGlobale = '/ajoutGlobale';
 
   // Gestionnaire des routes
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -92,7 +94,7 @@ class AppRoutes {
         );
 
       case suiviScreen:
-      //  return MaterialPageRoute(builder: (_) => SuiviScreen());
+        return MaterialPageRoute(builder: (_) => SuiviScreen());
       case revenusScreen:
       //return MaterialPageRoute(builder: (_) => RevenusScreen());
       case impayesScreen:
@@ -101,6 +103,8 @@ class AppRoutes {
       //  return MaterialPageRoute(builder: (_) => QueuesScreen());
       case gestionEmployesScreen:
         return MaterialPageRoute(builder: (_) => GestionEmployesScreen());
+      case ajoutGlobale:
+        return MaterialPageRoute(builder: (_) => AjoutGlobaleScreen());
 
       default:
         return MaterialPageRoute(

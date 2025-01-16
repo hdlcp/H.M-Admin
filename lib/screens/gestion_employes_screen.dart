@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../screens/custom_tab_bar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../app/app_routes.dart';
 
 class GestionEmployesScreen extends StatefulWidget {
   const GestionEmployesScreen({Key? key}) : super(key: key);
@@ -149,7 +150,7 @@ class _GestionEmployesScreenState extends State<GestionEmployesScreen>
                 0.05, // Position horizontale totalement à gauche
             child: GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, '/addItemPage');
+                Navigator.pushNamed(context, AppRoutes.ajoutGlobale);
               },
               child: Container(
                 width: 63, // Diamètre du bouton
